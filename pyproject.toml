@@ -3,11 +3,13 @@ name = "Open_Duck_Playground"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11, <3.13"
 dependencies = [
+    "nvidia-cusparse-cu12==12.4.1.24",
+    "jax>=0.5",
+    "jax-cuda12-plugin[with-cuda]>=0.5",
+    "jax-cuda12-pjrt>=0.5",
     "framesviewer>=1.0.2",
-    "jax[cuda12]>=0.5.0",
-    "jaxlib>=0.5.0",
     "jaxtyping>=0.2.38",
     "matplotlib>=3.10.0",
     "mediapy>=1.2.2",
@@ -16,6 +18,7 @@ dependencies = [
     "pygame>=2.6.1",
     "tensorflow>=2.18.0",
     "tf2onnx>=1.16.1",
+    "numpy==1.26.4",
 ]
 [build-system]
 requires = ["setuptools"]
